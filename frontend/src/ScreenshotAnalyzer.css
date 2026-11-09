@@ -1,0 +1,437 @@
+/* =========================================
+   SCAMSHIELD - SCREENSHOT ANALYZER
+   ========================================= */
+
+.screenshot-analyzer {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 25px;
+  box-sizing: border-box;
+  color: #111827;
+}
+
+/* Main Heading */
+
+.screenshot-analyzer > h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.screenshot-analyzer > p {
+  margin: 0 0 25px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   FILE INPUT
+   ========================================= */
+
+.screenshot-analyzer input[type="file"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  background: #f9fafb;
+  color: #374151;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.screenshot-analyzer input[type="file"]:hover {
+  border-color: #9ca3af;
+  background: #f3f4f6;
+}
+
+
+/* =========================================
+   UPLOADED IMAGE
+   ========================================= */
+
+.screenshot-analyzer img {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  max-height: 600px;
+  margin-top: 12px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+
+/* =========================================
+   ANALYZE BUTTON
+   ========================================= */
+
+.screenshot-analyzer button {
+  border: none;
+  border-radius: 10px;
+  padding: 13px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.screenshot-analyzer button:hover {
+  transform: translateY(-1px);
+}
+
+.screenshot-analyzer button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =========================================
+   ERROR
+   ========================================= */
+
+.screenshot-analyzer .error-message {
+  margin-top: 20px;
+  padding: 14px 16px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-left: 5px solid #dc2626;
+  border-radius: 10px;
+  color: #991b1b;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   EXTRACTED TEXT
+   ========================================= */
+
+.screenshot-analyzer .extracted-text {
+  margin-top: 25px;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.screenshot-analyzer .extracted-text h3 {
+  margin: 0 0 14px;
+  color: #111827;
+  font-size: 20px;
+}
+
+.screenshot-analyzer .extracted-text pre {
+  margin: 0;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  color: #111827;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   ANALYSIS RESULT
+   ========================================= */
+
+.screenshot-analyzer .analysis-result {
+  margin-top: 30px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  color: #111827;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.screenshot-analyzer .analysis-result > h2 {
+  margin: 0 0 25px;
+  color: #111827;
+  font-size: 25px;
+}
+
+
+/* =========================================
+   RISK CARD
+   ========================================= */
+
+.screenshot-analyzer .risk-card {
+  padding: 22px;
+  background: #f8fafc;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.screenshot-analyzer .risk-card h3 {
+  margin: 0 0 10px;
+  color: #374151;
+  font-size: 17px;
+}
+
+.screenshot-analyzer .risk-score {
+  font-size: 46px;
+  font-weight: 800;
+  color: #dc2626;
+  margin: 8px 0 18px;
+}
+
+
+/* =========================================
+   RISK BAR
+   ========================================= */
+
+.screenshot-analyzer .risk-bar {
+  width: 100%;
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.screenshot-analyzer .risk-fill {
+  height: 100%;
+  background: #dc2626;
+  border-radius: 20px;
+  transition: width 0.6s ease;
+}
+
+
+/* =========================================
+   VERDICT
+   ========================================= */
+
+.screenshot-analyzer .verdict-card {
+  padding: 20px;
+  background: #fef2f2;
+  border-left: 5px solid #dc2626;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.screenshot-analyzer .verdict-card h3 {
+  margin: 0 0 8px;
+  color: #374151;
+}
+
+.screenshot-analyzer .verdict {
+  font-size: 24px;
+  font-weight: 800;
+  color: #dc2626;
+}
+
+
+/* =========================================
+   RESULT SECTIONS
+   ========================================= */
+
+.screenshot-analyzer .result-section {
+  margin-top: 20px;
+  padding: 18px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.screenshot-analyzer .result-section h3 {
+  margin: 0 0 13px;
+  color: #111827;
+  font-size: 18px;
+}
+
+
+/* =========================================
+   TAGS
+   ========================================= */
+
+.screenshot-analyzer .tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.screenshot-analyzer .result-tag {
+  display: inline-block;
+  padding: 8px 13px;
+  background: #fee2e2;
+  color: #991b1b;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.screenshot-analyzer .keyword-tag {
+  display: inline-block;
+  padding: 8px 13px;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   EXPLANATION
+   ========================================= */
+
+.screenshot-analyzer .explanation {
+  margin: 0;
+  color: #374151;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+
+/* =========================================
+   RECOMMENDATION
+   ========================================= */
+
+.screenshot-analyzer .recommendation {
+  margin-top: 20px;
+  padding: 20px;
+  background: #ecfdf5;
+  border-left: 5px solid #10b981;
+  border-radius: 10px;
+}
+
+.screenshot-analyzer .recommendation h3 {
+  margin: 0 0 10px;
+  color: #047857;
+}
+
+.screenshot-analyzer .recommendation p {
+  margin: 0;
+  color: #065f46;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   ANALYZE ANOTHER BUTTON
+   ========================================= */
+
+.screenshot-analyzer .analyze-again-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #111827;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.screenshot-analyzer .analyze-again-btn:hover {
+  background: #1f2937;
+  transform: translateY(-1px);
+}
+
+.screenshot-analyzer .analyze-again-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .screenshot-analyzer {
+    padding: 15px;
+  }
+
+  .screenshot-analyzer > h2 {
+    font-size: 25px;
+  }
+
+  .screenshot-analyzer .analysis-result {
+    padding: 18px;
+  }
+
+  .screenshot-analyzer .risk-score {
+    font-size: 38px;
+  }
+
+  .screenshot-analyzer .verdict {
+    font-size: 21px;
+  }
+
+  .screenshot-analyzer .result-section {
+    padding: 15px;
+  }
+
+  .screenshot-analyzer .tag-container {
+    gap: 7px;
+  }
+
+  .screenshot-analyzer .result-tag,
+  .screenshot-analyzer .keyword-tag {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+}
+.uploaded-preview {
+  margin-top: 25px;
+}
+
+.uploaded-preview h3 {
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.uploaded-preview img {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  max-height: 500px;
+  object-fit: contain;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #f9fafb;
+}
+
+.analyze-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #111827;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.analyze-btn:hover {
+  background: #1f2937;
+  transform: translateY(-1px);
+}
+
+.analyze-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
